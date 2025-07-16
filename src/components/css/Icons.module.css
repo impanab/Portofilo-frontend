@@ -1,0 +1,14 @@
+.icon_Container{
+   display: flex;
+   justify-content: space-evenly;
+   width: 200px;
+   margin-top: 40px;
+}
+
+.link{
+    color:#eaeaea;
+  
+}
+.link:hover{
+    color:  #4b5157c8;
+}

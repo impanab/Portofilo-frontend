@@ -1,0 +1,297 @@
+  .hero-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 60px; 
+    position: relative;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, rgb(2, 19, 30) 0%, rgb(4, 25, 40) 50%, rgb(6, 35, 50) 100%);
+    color: #e0e0e0;
+    overflow: hidden; 
+    text-align: center; 
+  }
+  
+  .hero-icons-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    animation: fadeInUp 1s ease-out 1.2s both;
+  }
+  
+  .hero-icons-wrapper svg,
+  .hero-icons-wrapper img {
+    /* width: 48px; */
+    /* height: 48px; */
+    padding: 3px 
+  }
+  
+
+  
+  
+  .hero-content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    max-width: 800px;
+    width: 100%;
+  }
+  .hero-title {
+    font-size: clamp(1.5rem, 8vw, 6rem);
+    font-weight: 200;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 0%, #020d3b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .name-sec {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    font-weight: 300;
+    background: linear-gradient(135deg, #ffffff 0%, #8ec5d6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease-out 0.6s both;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.9s both;
+  }
+  
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, rgba(2, 19, 30, 0.8) 0%, rgba(4, 25, 40, 0.9) 100%);
+    color: white;
+    border: 1px solid #4a7c8a;
+    backdrop-filter: blur(10px);
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(135deg, rgba(4, 25, 40, 0.9) 0%, rgba(6, 35, 50, 1) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(2, 19, 30, 0.4);
+    border-color: #5a8c9a;
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: #8ec5d6;
+    border: 1px solid #4a7c8a;
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(142, 197, 214, 0.1);
+    border-color: #5a8c9a;
+    transform: translateY(-2px);
+  }
+  
+  .background-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(142, 197, 214, 0.08) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .bg-circle:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .bg-circle:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+  
+  .bg-circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+  }
+  
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #7bb3c7;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .scroll-text {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .scroll-arrow {
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(to bottom, #7bb3c7, transparent);
+    position: relative;
+    animation: bounce 2s infinite;
+  }
+  
+  .scroll-arrow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -3px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #7bb3c7;
+    border-bottom: 2px solid #7bb3c7;
+    transform: rotate(45deg);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .btn {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .hero-content {
+      top: 45%;
+      padding: 0 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .hero-description {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  
+    .scroll-indicator {
+      bottom: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content {
+      top: 55%;
+    }
+  
+    .hero-title {
+      font-size: clamp(1.5rem, 7vw, 4rem);
+    }
+  
+    .name-sec {
+      font-size: clamp(1.4rem, 6vw, 2.5rem);
+    }
+  
+    .hero-description {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+  
